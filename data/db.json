@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "produto 1",
+      "description": "produto de usar no cabelo",
+      "price": 100 
+    },
+    {
+      "id": 2,
+      "name": "produto 2",
+      "description": "produto de usar no rosto",
+      "price": 54.90 
+    },
+    {
+      "id": 3,
+      "name": "produto 3",
+      "description": "produto de passar no pé",
+      "price": 19.99 
+    },
+    {
+      "id": 4,
+      "name": "produto 4",
+      "description": "produto de beber",
+      "price": 21.10 
+    }
+  ]
+}
