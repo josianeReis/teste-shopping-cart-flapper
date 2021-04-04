@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import List from '../List';
 
 import './ProductsCart.module.scss';
 
@@ -12,7 +13,9 @@ const ProductsCart: React.FC = () => {
   return (
     <>
       {console.log('cartProducts', cartProducts)}
-      <div>carrinho de produtos</div>
+      <div>
+        <List />
+      </div>
     </>
   );
 };

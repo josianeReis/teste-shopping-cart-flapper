@@ -13,7 +13,6 @@ type Props = {
 const ProductItem: React.FC<Props> = ({ product }) => {
   const dispatch = useDispatch();
   const { id, title, description, img, price }: any = product;
-  console.log('productItem', product);
 
   return (
     <article id="card">

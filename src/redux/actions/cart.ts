@@ -15,3 +15,17 @@ export const removeFromCart = (payload: any) => {
     payload,
   };
 };
+
+export const incProductQtd = (payload: any) => {
+  return {
+    type: actions.INC_PRODUCT_QTD,
+    payload,
+  };
+};
+
+export const decProductQtd = (payload: any) => {
+  return {
+    type: actions.DEC_PRODUCT_QTD,
+    payload,
+  };
+};

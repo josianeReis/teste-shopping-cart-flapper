@@ -1,5 +1,9 @@
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const INC_PRODUCT_QTD = "INC_PRODUCT_QTD";
+export const DEC_PRODUCT_QTD = "DEC_PRODUCT_QTD";
+
+
 
 

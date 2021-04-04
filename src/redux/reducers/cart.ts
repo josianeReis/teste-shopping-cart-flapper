@@ -29,6 +29,24 @@ export const cart = (state = INITIAL_STATE, action: any): any => {
           (item: any) => item.id !== action.payload.id
         ),
       };
+    case actions.INC_PRODUCT_QTD: {
+      const products = state.cartItems.map((item: any) =>
+        item.id === action.payload.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+
+      return { ...state, cartItems: products };
+    }
+    case actions.DEC_PRODUCT_QTD: {
+      const products = state.cartItems.map((item: any) =>
+        item.id === action.payload.id
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      );
+
+      return { ...state, cartItems: products };
+    }
     default:
       return state;
   }
