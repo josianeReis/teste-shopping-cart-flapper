@@ -9,7 +9,7 @@ const INITIAL_STATE = {
       description:
         'This cube will keep you busy the entire day and it is very fun to play with',
       price: 15.0,
-      image:
+      img:
         'https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     },
     {
@@ -18,7 +18,7 @@ const INITIAL_STATE = {
       description:
         'Get a big cup of coffee every morning before the day starts',
       price: 20.0,
-      image:
+      img:
         'https://images.unsplash.com/photo-1572119865084-43c285814d63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     },
   ],

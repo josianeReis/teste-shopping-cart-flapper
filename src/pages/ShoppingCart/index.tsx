@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react';
-import ProductList from '../../components/ProductList';
+import ProductsList from '../../components/ProductsList';
+import ProductsCart from '../../components/ProductsCart';
 import { getProducts } from '../../services';
 
 import './ShoppingCart.module.scss';
@@ -17,7 +18,12 @@ const ShoppingCart: React.FC = () => {
     // fetchProducts();
   }, [fetchProducts]);
 
-  return <ProductList />;
+  return (
+    <main className="container">
+      <ProductsList />
+      <ProductsCart />
+    </main>
+  );
 };
 
 export default ShoppingCart;

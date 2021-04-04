@@ -1,21 +1,34 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/actions/cart';
 
-import './ProductItem.module.scss';
+import './ProductItem.scss';
 
 type Props = {
   product: any;
 };
 
 const ProductItem: React.FC<Props> = ({ product }) => {
-  const { title, description, img, price }: any = product;
+  const dispatch = useDispatch();
+  const { id, title, description, img, price }: any = product;
+  console.log('productItem', product);
 
   return (
-    <article className="productContainer">
-      <img className="cardImage" src={img} alt={title} width="20%" />
-      <div className="productContent">
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <p>{price}</p>
+    <article id="card">
+      <img className="card-img" src={img} alt={title} />
+
+      <div className="card-details">
+        <p className="title">{title}</p>
+        <p className="description">{description}</p>
+        <p className="price">R$ {price}</p>
+      </div>
+
+      <div className="button">
+        <button onClick={() => dispatch(addToCart(product))}>
+          Add To Cart
+        </button>
       </div>
     </article>
   );

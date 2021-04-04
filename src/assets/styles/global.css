@@ -50,13 +50,14 @@ body::-webkit-scrollbar {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 body,
 input,
 button,
 textarea {
-  font: 400 1.6rem Poppins;
+  font: 400 1.3rem Poppins;
   color: var(--color-text-base);
   outline: none;
 }
