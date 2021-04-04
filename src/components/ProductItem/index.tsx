@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../redux/actions/cart';
+import { addToCart, removeFromCart } from '../../redux/actions/cart';
 
 import './ProductItem.scss';
 
@@ -28,6 +28,9 @@ const ProductItem: React.FC<Props> = ({ product }) => {
       <div className="button">
         <button onClick={() => dispatch(addToCart(product))}>
           Add To Cart
+        </button>
+        <button onClick={() => dispatch(removeFromCart(product))}>
+          Remove from Cart
         </button>
       </div>
     </article>

@@ -22,6 +22,13 @@ export const cart = (state = INITIAL_STATE, action: any): any => {
       return { ...state, cartItems: products };
     }
 
+    case actions.REMOVE_FROM_CART:
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(
+          (item: any) => item.id !== action.payload.id
+        ),
+      };
     default:
       return state;
   }

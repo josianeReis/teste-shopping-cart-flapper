@@ -11,7 +11,7 @@ export const addToCart = (payload: any) => {
 
 export const removeFromCart = (payload: any) => {
   return {
-    type: actions.ADD_TO_CART,
+    type: actions.REMOVE_FROM_CART,
     payload,
   };
 };
