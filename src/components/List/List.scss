@@ -7,8 +7,8 @@
   
   .responsive-table {
     li {
-      border-radius: 3px;
-      padding: 25px 30px;
+      border-radius: 0.3rem;
+      padding: 2rem 1rem;
       display: flex;
       justify-content: space-between;
       margin-bottom: 1.5rem;
@@ -49,12 +49,39 @@
       }
       .col {
         display: flex;
-        padding: 10px 0;
+        padding: 6px 0;
         &:before {
           padding-right: 10px;
           content: attr(data-label);
           flex-basis: 50%;
           text-align: right;
+        }
+      }
+    }
+
+    .table-footer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .shopping-resume {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .button-finish {
+        justify-content: flex-end;
+        display: flex;
+        margin-top: 2rem;
+        button {
+          padding: 0.5rem;
+          background:rgb(173, 235, 122);
+          border: 1px solid rgb(173, 235, 122);
+          border-radius: 0.5rem;
+          font-size: 1.2rem;
+          font-weight: bold;
+          cursor: pointer;
         }
       }
     }

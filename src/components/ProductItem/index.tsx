@@ -24,13 +24,8 @@ const ProductItem: React.FC<Props> = ({ product }) => {
         <p className="price">R$ {price}</p>
       </div>
 
-      <div className="button">
-        <button onClick={() => dispatch(addToCart(product))}>
-          Add To Cart
-        </button>
-        <button onClick={() => dispatch(removeFromCart(product))}>
-          Remove from Cart
-        </button>
+      <div className="button-container">
+        <button onClick={() => dispatch(addToCart(product))}>Comprar</button>
       </div>
     </article>
   );

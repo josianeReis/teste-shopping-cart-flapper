@@ -5,21 +5,21 @@ const INITIAL_STATE = {
   products: [
     {
       id: 1,
-      title: 'This is the COOLEST Cube Ever',
+      title: 'Nome do produto 1',
       description:
-        'This cube will keep you busy the entire day and it is very fun to play with',
-      price: 15.0,
+        'is simply dummy text of the printing and typesetting industry',
+      price: 25.0,
       img:
-        'https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        'https://images.unsplash.com/photo-1598134025798-bfb6540ca748?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80',
     },
     {
       id: 2,
-      title: 'Large Coffee Cup',
+      title: 'Nome do produto 2',
       description:
-        'Get a big cup of coffee every morning before the day starts',
-      price: 20.0,
+        'Lorem Ipsum is not simply random text. It has roots in a piece of',
+      price: 7.0,
       img:
-        'https://images.unsplash.com/photo-1572119865084-43c285814d63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        'https://images.unsplash.com/photo-1517242027094-631f8c218a0f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80',
     },
   ],
 };

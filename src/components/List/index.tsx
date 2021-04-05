@@ -19,12 +19,26 @@ const columns: any = [
   },
   {
     id: 'price',
-    label: 'Valor - Un.',
+    label: 'Valor (P x Qtd)',
+    render: (index: any, column: any, product: any, action: any) => {
+      return (
+        <div
+          key={`product-col-${column.id}`}
+          className={`col col-${index}`}
+          data-label={column.label}
+        >
+          {(product[column.id] * product.quantity).toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+          })}
+        </div>
+      );
+    },
   },
   {
     id: 'quantity',
     label: 'Qtd',
-    render: (product: any, action: any) => {
+    render: (index: any, column: any, product: any, action: any) => {
       return (
         <ProductQuantity
           value={product.quantity}
@@ -37,7 +51,7 @@ const columns: any = [
   {
     id: 'exclude',
     label: 'Excluir',
-    render: (product: any, action: any) => {
+    render: (index: any, column: any, product: any, action: any) => {
       return (
         <RiDeleteBin6Line
           onClick={() => action(removeFromCart(product))}
@@ -54,9 +68,16 @@ const List: React.FC = () => {
   const dispatch = useDispatch();
   const products = useSelector((state: any) => state.cart.cartItems);
 
+  const totalCart = products
+    .reduce((a: any, c: any) => a + c.price * c.quantity, 0)
+    .toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    });
+
   console.log('products products', products);
 
-  return (
+  return products.length ? (
     <div id="table-container">
       <ul className="responsive-table">
         <li className="table-header">
@@ -80,15 +101,28 @@ const List: React.FC = () => {
                   >
                     {!column.render
                       ? item[column.id]
-                      : column.render(item, (fn: any) => dispatch(fn))}
+                      : column.render(index, column, item, (fn: any) =>
+                          dispatch(fn)
+                        )}
                   </div>
                 );
               })}
             </li>
           );
         })}
+        <li className="table-footer">
+          <div className="shopping-resume">
+            <div className="footer-label">Total</div>
+            <div className="shopping-total-value">{totalCart || 0}</div>
+          </div>
+          <div className="button-finish">
+            <button>Finalizar Compra</button>
+          </div>
+        </li>
       </ul>
     </div>
+  ) : (
+    <p>Carrinho vazio</p>
   );
 };
 
